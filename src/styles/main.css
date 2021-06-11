@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+  min-height: 101%;
+}
+
+body {
+  font-size: 62.5%;
+  @apply font-sans text-sm antialiased font-normal leading-normal xl:text-base;
+}
+
+.container {
+  @apply mx-auto max-w-screen-3xl;
+}
+
+a {
+  @apply transition duration-300;
+}
+
+[class*="transition"] {
+  @apply duration-300;
+}
+
+/* --------------------------
+Headings
+-------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply p-0 mb-6 font-bold leading-tight;
+}
+
+h1 {
+  @apply text-xl;
+}
+
+h2 {
+  @apply text-lg;
+}
+
+/* --------------------------
+Content
+-------------------------- */
+
+.content p {
+  @apply mb-6;
+}

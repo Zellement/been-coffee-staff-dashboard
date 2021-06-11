@@ -1,0 +1,50 @@
+{
+  "name": "gatsby-tailwind-starter",
+  "private": false,
+  "description": "A simple starter to get up and developing quickly with Gatsby v3",
+  "version": "0.1.0",
+  "author": "Dan Farrow <dan@zellement>",
+  "dependencies": {
+    "@fontsource/open-sans": "^4.4.5",
+    "framer-motion": "^4.1.17",
+    "gatsby": "^3.7.1",
+    "gatsby-image": "^3.7.1",
+    "gatsby-plugin-manifest": "^3.7.1",
+    "gatsby-plugin-offline": "^4.7.1",
+    "gatsby-plugin-react-helmet": "^4.7.1",
+    "gatsby-plugin-sharp": "^3.7.1",
+    "gatsby-source-filesystem": "^3.7.1",
+    "gatsby-transformer-sharp": "^3.7.1",
+    "postcss-import": "^14.0.2",
+    "postcss-import-resolver": "^2.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "gatsby-plugin-postcss": "^4.7.1",
+    "postcss": "^8.3.2",
+    "tailwindcss": "^2.1.4"
+  },
+  "keywords": [
+    "gatsby",
+    "tailwind",
+    "framer",
+    "motion"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby clean && gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zellement/gatsby-tailwind-starter"
+  }
+}
