@@ -56,3 +56,7 @@ Content
     @apply mb-6;
   }
 }
+
+.primaryNav-item-is-active {
+  @apply underline;
+}

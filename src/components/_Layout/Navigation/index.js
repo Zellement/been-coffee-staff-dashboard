@@ -20,7 +20,7 @@ export default function Navigation(props) {
                 onClick={() => {
                   setMobileNavOpen(false)
                 }}
-                activeClassName="is-active"
+                activeClassName={"primaryNav-item-is-active"}
                 to={navItem.url}
               >
                 {navItem.name}
