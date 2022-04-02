@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 62.5%;
+html, body {
   min-height: 101%;
 }
 
-body {
+html {
   font-size: 62.5%;
+}
+
+body {
   @apply font-sans text-sm antialiased font-normal leading-normal xl:text-base;
 }
 
@@ -49,6 +51,8 @@ h2 {
 Content
 -------------------------- */
 
-.content p {
-  @apply mb-6;
+.content {
+  p {
+    @apply mb-6;
+  }
 }
