@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -27,7 +26,8 @@ const variants = {
   },
 }
 
-const Layout = ({ children, location }) => {
+const Layout = (props) => {
+  const { children, location } = props || {}
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -54,10 +54,6 @@ const Layout = ({ children, location }) => {
       </AnimatePresence>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
