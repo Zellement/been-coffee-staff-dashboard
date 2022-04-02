@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../components/_Atoms/Button"
 import Seo from "../components/_Seo"
 
 const IndexPage = () => {
@@ -9,6 +10,8 @@ const IndexPage = () => {
         <div className="content">
           <h1 className="">Home Page</h1>
         </div>
+
+        <Button url={"#"} label={"Button"} />
 
         <div className="content">
           <p>

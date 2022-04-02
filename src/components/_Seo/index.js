@@ -1,6 +1,5 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
 
 export default function Seo(props) {
   const { description = "Gatsby Starter", title = "Gatsby Starter" } =
