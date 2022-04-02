@@ -1,11 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: {
-    content: ["./src/**/*.js"],
-    options: {
-      whitelist: ["is-active"],
-    },
-  },
+  content: ["./src/**/*.js"],
   theme: {
     fontSize: {
       "2xs": "1.4rem",

@@ -1,14 +1,17 @@
 import React from "react"
-import Seo from "../components/Seo"
+import Button from "../components/_Atoms/Button"
+import Seo from "../components/_Seo"
 
 const IndexPage = () => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title="Home" description="Gatsby Starter" />
       <section className="container">
         <div className="content">
           <h1 className="">Home Page</h1>
         </div>
+
+        <Button url={"#"} label={"Button"} />
 
         <div className="content">
           <p>

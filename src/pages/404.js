@@ -1,11 +1,13 @@
 import React from "react"
-import Seo from "../components/Seo"
+import Seo from "../components/_Seo"
 
 const NotFoundPage = () => (
   <>
-    <Seo title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Seo title="Error" description="Sorry, this page doesn't exist." />
+    <h1>Error</h1>
+    <p>
+      Sorry, this page doesn't exist. Please go to the <a href="/">homepage</a>.
+    </p>
   </>
 )
 
