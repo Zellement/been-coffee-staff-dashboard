@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from "framer-motion"
 
 import Header from "./Header"
 
@@ -16,7 +16,7 @@ const variants = {
     transition: {
       duration: duration,
       delay: duration,
-      when: 'beforeChildren',
+      when: "beforeChildren",
     },
   },
   exit: {
@@ -49,7 +49,7 @@ const Layout = ({ children, location }) => {
           animate="enter"
           exit="exit"
         >
-        {children}
+          {children}
         </motion.main>
       </AnimatePresence>
     </>

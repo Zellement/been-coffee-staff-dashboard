@@ -1,10 +1,10 @@
 import React from "react"
-import Seo from "../components/Seo"
+import Seo from "../components/_Seo"
 
 const IndexPage = () => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title="Home" description="Gatsby Starter" />
       <section className="container">
         <div className="content">
           <h1 className="">Home Page</h1>
