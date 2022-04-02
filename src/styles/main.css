@@ -48,6 +48,22 @@ h2 {
 }
 
 /* --------------------------
+Rows & Containers
+-------------------------- */
+
+.row {
+  @apply my-8 lg:my-16;
+}
+
+.container {
+  @apply mx-auto max-w-screen-2xl;
+}
+
+.block-padding {
+  @apply p-4 md:p-6 lg:p-8;
+}
+
+/* --------------------------
 Content
 -------------------------- */
 
@@ -56,6 +72,10 @@ Content
     @apply mb-6;
   }
 }
+
+/* --------------------------
+Active Nav Item - Header
+-------------------------- */
 
 .primaryNav-item-is-active {
   @apply underline;

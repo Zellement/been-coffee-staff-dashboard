@@ -9,8 +9,8 @@ export default function Header(props) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   return (
-    <header className="py-8 md:py-16">
-      <div className="container">
+    <header>
+      <div className="container block-padding">
         <div className="flex items-center justify-between w-full mb-4">
           <Link className="block text-lg font-bold md:text-xl" to="/">
             {siteTitle}
