@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby & Tailwind Starter`,
-    description: `An opinionated starter for Gatsby v3 with TailwindCSS, PostCSS and Framer Motion page transitions.`,
+    title: `Been Coffee Staff Dashboard`,
+    description: `Staff dashboard for Been Coffee employees.`,
     author: `@zellement`,
   },
   plugins: [
@@ -13,7 +13,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
