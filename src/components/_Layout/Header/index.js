@@ -12,7 +12,7 @@ export default function Header(props) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   return (
-    <header className={`block-padding ${className}`}>
+    <header className={`block-padding bg-navy-500 ${className}`}>
       <div className="flex flex-col items-start w-full text-left ">
         <div className="flex flex-row items-center justify-between w-full text-left lg:flex-col block-padding">
           <Logo className="block max-w-[80px] lg:mb-8" />

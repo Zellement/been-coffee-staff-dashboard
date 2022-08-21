@@ -40,7 +40,7 @@ const Layout = (props) => {
   `)
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12">
+    <div className="grid min-h-screen grid-cols-1 lg:grid-cols-12">
       <Header className="lg:col-span-4" siteTitle={data.site.siteMetadata.title} />
         <Auth0 className="lg:col-span-8 lg:col-start-5">
             {children}
