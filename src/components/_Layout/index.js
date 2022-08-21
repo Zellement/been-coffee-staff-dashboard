@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
+import Auth0 from "./Auth0"
 
 import Header from "./Header"
 
@@ -39,20 +40,12 @@ const Layout = (props) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <AnimatePresence>
-        <motion.main
-          key={location.pathname}
-          variants={variants}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
-          {children}
-        </motion.main>
-      </AnimatePresence>
-    </>
+    <div className="grid grid-cols-1 lg:grid-cols-12">
+      <Header className="lg:col-span-4" siteTitle={data.site.siteMetadata.title} />
+        <Auth0 className="lg:col-span-8 lg:col-start-5">
+            {children}
+        </Auth0>
+    </div>
   )
 }
 

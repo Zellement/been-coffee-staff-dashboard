@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "../components/_Atoms/Button"
 import Seo from "../components/_Seo"
+import { Link } from "gatsby";
 
 const IndexPage = () => {
   return (
@@ -14,8 +15,9 @@ const IndexPage = () => {
 
       <section className="row">
         <div className="container block-padding">
-          <Button url={"#"} label={"Button"} />
 
+          <br />
+          <Link to="/account">Go to your account</Link>
           <div className="content">
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse

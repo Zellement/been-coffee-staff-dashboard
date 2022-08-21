@@ -1,6 +1,7 @@
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.js"],
+  safelist: ["is-active"],
   theme: {
     fontSize: {
       "2xs": "1.4rem",
@@ -32,7 +33,53 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Open Sans", "sans-serif"],
+        riverside: ["Riverside", "Impact", "sans-serif"],
+        "riverside-outline": ["Riverside Outline", "Impact", "sans-serif"],
+        krete: ["Krete", "Georgia", "serif"],
+      },
+      colors: {
+        butterscotch: {
+          DEFAULT: "#FAB944",
+          50: "#FFFCF7",
+          100: "#FEF4E3",
+          200: "#FDE6BB",
+          300: "#FCD793",
+          400: "#FBC86C",
+          500: "#FAB944",
+          600: "#F9A50D",
+          700: "#C88305",
+          800: "#925F04",
+          900: "#5B3B02",
+        },
+        tuscany: {
+          DEFAULT: "#D05C32",
+          50: "#F2D3C7",
+          100: "#EEC6B7",
+          200: "#E7AB96",
+          300: "#DF9174",
+          400: "#D87653",
+          500: "#D05C32",
+          600: "#A44726",
+          700: "#77331B",
+          800: "#492011",
+          900: "#1B0C06",
+        },
+        navy: {
+          DEFAULT: "#1B1D3C",
+          50: "#5A5FB5",
+          100: "#4E53AD",
+          200: "#414690",
+          300: "#343874",
+          400: "#282B58",
+          500: "#1B1D3C",
+          600: "#0A0A15",
+          700: "#000000",
+          800: "#000000",
+          900: "#000000",
+        },
+        seashell: {
+          DEFAULT: "#fff4e8",
+        },
       },
       zIndex: {
         "-10": "-10",

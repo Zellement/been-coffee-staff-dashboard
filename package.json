@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-tailwind-starter",
+  "name": "been-coffee-staff-dashboard",
   "private": false,
-  "description": "A simple starter to get up and developing quickly with Gatsby v4",
+  "description": "Staff dashboard for Been Coffee employees",
   "version": "0.1.0",
   "author": "Dan Farrow <dan@zellement>",
   "dependencies": {
-    "@fontsource/open-sans": "^4.5.8",
+    "@auth0/auth0-react": "^1.10.2",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.11.1",
     "gatsby-image": "^3.7.1",
@@ -25,6 +25,7 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "autoprefixer": "^10.4.4",
     "gatsby-plugin-postcss": "^5.11.0",
     "postcss": "^8.4.12",

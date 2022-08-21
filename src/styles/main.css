@@ -2,21 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  min-height: 101%;
+@font-face {
+  font-family: "Riverside";
+  src: url("../fonts/Riverside.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Riverside Outline";
+  src: url("../fonts/RiversideOutline.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Krete Book";
+  src: url("../fonts/KreteBook.otf") format("opentype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-riverside,
+.font-riverside-outline {
+  @apply leading-none uppercase;
+}
+
 
 html {
   font-size: 62.5%;
+  min-height: 101%;
 }
 
 body {
-  @apply font-sans text-sm antialiased font-normal leading-normal xl:text-base;
+  font-size: 62.5%;
+  @apply relative text-sm antialiased font-normal leading-normal text-navy font-krete xl:text-base ;
 }
 
-.container {
-  @apply mx-auto max-w-screen-3xl;
+body::after {
+  content: '';
+  background-image: url("../images/pattern-butterscotch.svg");
+  @apply fixed inset-0 w-full h-full pointer-events-none opacity-10 -z-10 bg-seashell;
 }
+
 
 a {
   @apply transition duration-300;
@@ -24,6 +55,18 @@ a {
 
 [class*="transition"] {
   @apply duration-300;
+}
+
+.btn {
+  @apply px-6 py-4 border-b-2 border-current hover:bg-tuscany-700 hover:text-white hover:border-tuscany-700;
+}
+
+.btn--tuscany {
+  @apply inline-block text-tuscany;
+}
+
+.block-padding {
+  @apply p-4 md:p-6 xl:p-8;
 }
 
 /* --------------------------
@@ -36,7 +79,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply p-0 mb-6 font-bold leading-tight;
+  @apply p-0 mb-6 font-normal leading-tight font-riverside;
 }
 
 h1 {
@@ -48,35 +91,69 @@ h2 {
 }
 
 /* --------------------------
-Rows & Containers
--------------------------- */
-
-.row {
-  @apply my-8 lg:my-16;
-}
-
-.container {
-  @apply mx-auto max-w-screen-2xl;
-}
-
-.block-padding {
-  @apply p-4 md:p-6 lg:p-8;
-}
-
-/* --------------------------
 Content
 -------------------------- */
 
-.content {
-  p {
-    @apply mb-6;
+.content p {
+  @apply mb-8;
+}
+
+.content h2 {
+  @apply text-2xl lg:text-4xl;
+}
+
+.content h3 {
+  @apply mt-16 text-2xl lg:text-3xl;
+}
+
+.content h4 {
+  @apply mt-16 text-xl lg:text-2xl;
+}
+
+.content a:not(.btn) {
+  @apply text-tuscany-500 hover:text-tuscany-700;
+}
+
+.homepage-image {
+  clip-path: polygon(0 0, 100% 15%, 100% 75%, 0 90%);
+}
+
+.homepage-image--mobile {
+  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 75%);
+}
+
+.overlay {
+  clip-path: polygon(0 0, 100% 15%, 100% 75%, 0 90%);
+}
+
+.where-image {
+  clip-path: polygon(0 0, 99% 0, 100% 85%, 0 100%);
+}
+
+.saz-martin-hero {
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  @screen lg {
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
   }
 }
 
-/* --------------------------
-Active Nav Item - Header
--------------------------- */
+.polygon-clip-mask--bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
 
-.primaryNav-item-is-active {
-  @apply underline;
+}
+
+.section--who {
+  @apply relative max-w-screen-lg p-4 mx-auto mt-4 mb-8 md:p-16 lg:p-24 xl:p-32 bg-seashell;
+}
+
+.title--who {
+  @apply py-8 text-3xl text-center font-riverside-outline lg:text-5xl lg:p-0;
+}
+.title--who span {
+  @apply block font-riverside text-tuscany-500 lg:inline;
+}
+
+.clip-hexagon {
+  clip-path: polygon(13% 14%, 64% 0, 100% 37%, 88% 82%, 35% 99%, 0 60%);
+
 }
