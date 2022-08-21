@@ -35,8 +35,8 @@ const onRedirectCallback = (appState) => {
  export const wrapRootElement = ({ element }) => {
   return (
    <Auth0Provider
-    domain={process.env.AUTH0_DOMAIN}
-    clientId={process.env.AUTH0_CLIENTID}
+    domain={'been-coffee.eu.auth0.com'}
+    clientId={'OGRk7q4YMGjrdg2hXD88y7uWHdvHEoj4'}
     redirectUri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
     >
