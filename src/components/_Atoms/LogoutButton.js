@@ -8,9 +8,9 @@ function LogoutButton() {
    } = useAuth0();
 
    return isAuthenticated && (
-    <div className="flex flex-col items-end">
+    <div className="flex flex-row items-center justify-between w-full">
       <span className="text-2xs">Hello, {user.email}</span>
-     <button className="btn" onClick={() => {
+     <button className="btn btn--2xs" onClick={() => {
      logout({ returnTo: window.location.origin });
     }}>Log out</button></div>
  );

@@ -61,6 +61,14 @@ a {
   @apply px-6 py-4 border-b-2 border-current hover:bg-tuscany-700 hover:text-white hover:border-tuscany-700;
 }
 
+.btn--xs {
+  @apply text-xs;
+}
+
+.btn--2xs {
+  @apply py-2 text-2xs;
+}
+
 .btn--tuscany {
   @apply inline-block text-tuscany;
 }
