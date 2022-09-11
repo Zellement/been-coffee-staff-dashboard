@@ -17,9 +17,9 @@ const Layout = (props) => {
   `)
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12">
-      <Header className="lg:col-span-3" siteTitle={data.site.siteMetadata.title} />
-        <Auth0 className="lg:col-span-9 lg:col-start-4">
+    <div className="grid grid-cols-1 ">
+      <Header  siteTitle={data.site.siteMetadata.title} />
+        <Auth0 >
             {children}
             <Footer />
         </Auth0>
