@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react"
 import Button from "../../_Atoms/Button"
 import { RiMoneyPoundCircleFill, RiHomeSmileFill } from "react-icons/ri"
 import { BiChevronDown } from "react-icons/bi"
+import { GoGlobe } from "react-icons/go"
 
 export default function Footer() {
   const { isAuthenticated, user } = useAuth0()
@@ -29,6 +30,9 @@ export default function Footer() {
           </button>
           <Button className="flex flex-row items-center gap-1" url="/">
             <span className="sr-only">Home</span> <RiHomeSmileFill />
+          </Button>
+          <Button className="flex flex-row items-center gap-1" external url="https://www.been.coffee">
+            <span className="sr-only">Website</span> <GoGlobe />
           </Button>
           {user.payslipUrl ? (
             <Button

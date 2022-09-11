@@ -11,7 +11,7 @@ const IndexPage = () => {
           <h1 className="m-0">Dashboard</h1>
       </section>
 
-      <section className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 lg:grid-cols-12">
+      <section className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 lg:grid-cols-5">
 
         <Link to="/policies" className="flex flex-col gap-2 text-left bg-white shadow-lg block-padding rounded-xl">
           <h2>Policies</h2>

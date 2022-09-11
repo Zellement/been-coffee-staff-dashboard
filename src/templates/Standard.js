@@ -7,11 +7,24 @@ import FlexibleContent from "../components/_Layout/FlexibleContent"
 
 const TemplateStandard = ({data}) => {
 
-  const { title, subtitle, articleContent} = data.datoCmsArticle || {};
+  const { title, subtitle, articleContent, category} = data.datoCmsArticle || {};
   return (
     <>
       <Seo title={title}/>
       <section className="container flex flex-col gap-2 p-4">
+        { category ? (
+          <div className="flex flex-row gap-2 mb-4">
+
+
+            {category.map((cat) => {
+                return (
+                  <Button className="text-2xs" url={`/${cat.slug}`}>{cat.title}</Button>
+                )
+            })}
+
+          </div>
+
+        ) : null}
           <h1 className="m-0">{title}</h1>
           { subtitle ? <h2 className="m-0 text-tuscany-500">{ subtitle }</h2> : null }
       </section>
@@ -40,6 +53,11 @@ query ($slug: String!) {
             apiKey
           }
         }
+      }
+      category {
+        id
+        slug
+        title
       }
     }
   }
