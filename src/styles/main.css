@@ -39,7 +39,7 @@ html {
 
 body {
   font-size: 62.5%;
-  @apply relative text-sm antialiased font-normal leading-normal text-navy font-krete xl:text-base ;
+  @apply relative text-xs antialiased font-normal leading-normal text-navy font-krete xl:text-sm ;
 }
 
 body::after {
@@ -58,7 +58,7 @@ a {
 }
 
 .btn {
-  @apply px-6 py-4 border-b-2 border-current hover:bg-tuscany-700 hover:text-white hover:border-tuscany-700;
+  @apply px-3 py-2 border border-current hover:bg-tuscany-700 hover:text-white hover:border-tuscany-700;
 }
 
 .btn--xs {
@@ -87,7 +87,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply p-0 mb-6 font-normal leading-tight font-riverside;
+  @apply p-0 font-normal leading-tight font-riverside;
 }
 
 h1 {
@@ -98,6 +98,11 @@ h2 {
   @apply text-lg;
 }
 
+h3 {
+  @apply text-base;
+}
+
+
 /* --------------------------
 Content
 -------------------------- */
@@ -106,62 +111,24 @@ Content
   @apply mb-8;
 }
 
-.content h2 {
-  @apply text-2xl lg:text-4xl;
+.content h2, .content h3, .content h4 {
+  @apply mb-4;
 }
 
-.content h3 {
-  @apply mt-16 text-2xl lg:text-3xl;
+
+.content h2, .content h3, .content h4 {
+  @apply text-tuscany-500;
 }
 
-.content h4 {
-  @apply mt-16 text-xl lg:text-2xl;
-}
-
-.content a:not(.btn) {
-  @apply text-tuscany-500 hover:text-tuscany-700;
-}
-
-.homepage-image {
-  clip-path: polygon(0 0, 100% 15%, 100% 75%, 0 90%);
-}
-
-.homepage-image--mobile {
-  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 75%);
-}
-
-.overlay {
-  clip-path: polygon(0 0, 100% 15%, 100% 75%, 0 90%);
-}
-
-.where-image {
-  clip-path: polygon(0 0, 99% 0, 100% 85%, 0 100%);
-}
-
-.saz-martin-hero {
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  @screen lg {
-    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+.content blockquote {
+  @apply relative pl-12 pr-4 border-l border-r border-navy;
+  &:before {
+    content: '"';
+    @apply absolute top-0 left-0 ml-2 -mt-2 text-3xl text-black;
   }
 }
 
-.polygon-clip-mask--bl {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
 
-}
-
-.section--who {
-  @apply relative max-w-screen-lg p-4 mx-auto mt-4 mb-8 md:p-16 lg:p-24 xl:p-32 bg-seashell;
-}
-
-.title--who {
-  @apply py-8 text-3xl text-center font-riverside-outline lg:text-5xl lg:p-0;
-}
-.title--who span {
-  @apply block font-riverside text-tuscany-500 lg:inline;
-}
-
-.clip-hexagon {
-  clip-path: polygon(13% 14%, 64% 0, 100% 37%, 88% 82%, 35% 99%, 0 60%);
-
+.content a:not(.btn) {
+  @apply text-tuscany-500 hover:text-tuscany-700;
 }

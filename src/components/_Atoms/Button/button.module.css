@@ -1,6 +1,12 @@
 .btn {
-  @apply inline-flex px-3 py-2;
-  &__red {
-    @apply bg-red-500;
+  @apply relative px-3 py-2 border border-current hover:lg:bg-tuscany-700 hover:lg:text-white hover:lg:border-tuscany-700;
+  &--external {
+    &:after {
+      content: '';
+      @apply absolute top-0 right-0 w-0 h-0 rotate-45 translate-x-1.5;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid theme('colors.gray.400');
+    }
   }
 }

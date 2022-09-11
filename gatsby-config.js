@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `Been Coffee Staff Dashboard`,
@@ -16,6 +18,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // You can find your read-only API token under the Settings > API tokens
+        // section of your administrative area. Make sure to grant both CDA and CMA permissions.
+        apiToken: process.env.DATOCMS,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -7,35 +7,17 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="Home" description="Gatsby Starter" />
-      <section className="container">
-        <div className="block-padding">
-          <h1 className="">Home Page</h1>
-        </div>
+      <section className="container p-4">
+          <h1 className="m-0">Dashboard</h1>
       </section>
 
-      <section className="row">
-        <div className="container block-padding">
+      <section className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 lg:grid-cols-12">
 
-          <br />
-          <Link to="/account">Go to your account</Link>
-          <div className="content">
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
+        <Link to="/policies" className="flex flex-col gap-2 text-left bg-white shadow-lg block-padding rounded-xl">
+          <h2>Policies</h2>
+          <p>Links to our policies, including our Holiday policy and Food, Drink & Discount policy.</p>
+        </Link>
 
-            <h2>Lorem ipsum dolor sit amet</h2>
-
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          </div>
-        </div>
       </section>
     </>
   )
