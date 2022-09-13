@@ -16,7 +16,7 @@ const PoliciesPage = ({data}) => {
           <h1 className="m-0">Policies</h1>
       </section>
 
-      <section className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 lg:grid-cols-12">
+      <section className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 lg:grid-cols-5">
         {post.edges.map((item, i) => {
           return (
             <Card url={item.node.slug} title={item.node.title} subtitle={item.node.subtitle} />
