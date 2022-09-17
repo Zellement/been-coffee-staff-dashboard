@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Button from "../components/_Atoms/Button"
+import Hero from "../components/_Molecules/Hero"
 import Seo from "../components/_Seo"
 import { IoIosOpen } from "react-icons/io"
 import FlexibleContent from "../components/_Layout/FlexibleContent"
@@ -11,25 +12,9 @@ const TemplateStandard = ({data}) => {
   return (
     <>
       <Seo title={title}/>
-      <section className="container flex flex-col gap-2 p-4">
-        { category ? (
-          <div className="flex flex-row gap-2 mb-4">
+      <Hero title={title} category={category} goBack subtitle={subtitle} />
 
-
-            {category.map((cat) => {
-                return (
-                  <Button className="text-2xs" url={`/${cat.slug}`}>{cat.title}</Button>
-                )
-            })}
-
-          </div>
-
-        ) : null}
-          <h1 className="m-0">{title}</h1>
-          { subtitle ? <h2 className="m-0 text-tuscany-500">{ subtitle }</h2> : null }
-      </section>
-
-      <section className="p-4 content">
+      <section className="container p-4 my-8 content">
         <FlexibleContent  content={articleContent} />
       </section>
     </>

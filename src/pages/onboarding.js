@@ -2,16 +2,16 @@ import React from "react"
 import Button from "../components/_Atoms/Button"
 import Seo from "../components/_Seo"
 import { IoIosOpen } from "react-icons/io"
+import Hero from "../components/_Molecules/Hero"
 
 const OnboardingPage = () => {
   return (
     <>
-      <Seo title="Home" description="Gatsby Starter" />
-      <section className="container p-4">
-          <h1 className="m-0">Onboarding</h1>
-      </section>
+      <Seo title="Onboarding" />
 
-      <section className="p-4 content">
+      <Hero title="Onboarding" goBack />
+
+      <section className="p-4 my-8 content">
           <h2>Welcome to Been Coffee!</h2>
           <p>We're super happy to have you here! :)</p>
 

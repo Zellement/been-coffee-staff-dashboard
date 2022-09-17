@@ -12,7 +12,7 @@ export default function Header(props) {
 
   return (
     <header className={` text-white bg-navy-500 ${className}`}>
-      <div className="flex flex-col items-start w-full text-left ">
+      <div className="container flex flex-col items-start w-full text-left ">
         <div className="flex flex-col items-center justify-between w-full gap-2 text-left lg:flex-row block-padding">
           <Link to="/" className="flex flex-col items-center gap-2">
             <StaticImage

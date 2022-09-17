@@ -1,35 +1,35 @@
-import React from "react"
-import Seo from "../components/_Seo"
-import mailchimp from "@mailchimp/mailchimp_marketing"
-// require("dotenv").config();
+// import React from "react"
+// import Seo from "../components/_Seo"
+// import mailchimp from "@mailchimp/mailchimp_marketing"
+// // require("dotenv").config();
 
-const NewslettersPage = () => {
+// const NewslettersPage = () => {
 
-  // const mailchimp = require("@mailchimp/mailchimp_marketing");
+//   // const mailchimp = require("@mailchimp/mailchimp_marketing");
 
-  mailchimp.setConfig({
-    apiKey: process.env.MC_KEY,
-    server: process.env.MC_CLIENT,
-  });
+//   mailchimp.setConfig({
+//     apiKey: process.env.MC_KEY,
+//     server: process.env.MC_CLIENT,
+//   });
   
-  async function run() {
-    const response = await mailchimp.ping.get();
-    console.log(response);
-  }
+//   async function run() {
+//     const response = await mailchimp.ping.get();
+//     console.log(response);
+//   }
   
-  run();
+//   run();
 
-  return (
-    <>
-      <Seo title="Policies" />
-      <section className="container p-4">
-          <h1 className="m-0">Policies</h1>
-      </section>
-    </>
-  )
-}
-
-
+//   return (
+//     <>
+//       <Seo title="Policies" />
+//       <section className="container p-4">
+//           <h1 className="m-0">Policies</h1>
+//       </section>
+//     </>
+//   )
+// }
 
 
-export default NewslettersPage
+
+
+// export default NewslettersPage
