@@ -36,6 +36,7 @@ module.exports = {
         riverside: ["Riverside", "Impact", "sans-serif"],
         "riverside-outline": ["Riverside Outline", "Impact", "sans-serif"],
         krete: ["Krete", "Georgia", "serif"],
+        mono: ['Courier', 'monospace']
       },
       colors: {
         butterscotch: {
