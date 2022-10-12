@@ -38,6 +38,15 @@ query ($slug: String!) {
             apiKey
           }
         }
+        ... on DatoCmsImageBlock {
+          id
+          model {
+            apiKey
+          }
+          images {
+            gatsbyImageData
+          }
+        }
       }
       category {
         id

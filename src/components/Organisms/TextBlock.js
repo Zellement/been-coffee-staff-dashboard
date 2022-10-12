@@ -5,7 +5,7 @@ function TextBlock({ data }) {
   const { text } = data || {};
 
   return (
-      <div className="">
+      <div className="container container--md">
 
             <div
               className=""

@@ -46,13 +46,17 @@ export default function Footer() {
               external
               url={user.payslipUrl}
             >
-              Payslips <RiMoneyPoundCircleFill />
+              My Payslips <RiMoneyPoundCircleFill />
             </Button>
           ) : null}
 
           {user.tillPin ? (
-            <span className="flex flex-row items-center gap-1 font-mono">
-              {user.tillPin} <FaCashRegister />
+            <span className="flex flex-row items-center gap-2 ">
+              <span className="flex flex-col items-end">
+                <span className="leading-none opacity-50 text-[10px]">Till PIN</span>
+                <span className="font-mono leading-none">{user.tillPin}</span>
+              </span>
+               <FaCashRegister />
             </span>
           ) : null}
         </div>
