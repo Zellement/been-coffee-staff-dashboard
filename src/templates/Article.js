@@ -6,7 +6,7 @@ import Seo from "../components/_Seo"
 import { IoIosOpen } from "react-icons/io"
 import FlexibleContent from "../components/_Layout/FlexibleContent"
 
-const TemplateStandard = ({data}) => {
+const Article = ({data}) => {
 
   const { title, subtitle, articleContent, category} = data.datoCmsArticle || {};
   return (
@@ -21,7 +21,7 @@ const TemplateStandard = ({data}) => {
   )
 }
 
-export default TemplateStandard
+export default Article
 
 export const query = graphql`
 query ($slug: String!) {

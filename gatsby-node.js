@@ -13,6 +13,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      categories: allDatoCmsCategory {
+        edges {
+          node {
+            title
+            slug
+          }
+        }
+      }
     }
     `
   );
@@ -24,7 +32,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.articles.edges.forEach(({ node }) => {
     createPage({
       path: "/" + node.slug + "/",
-      component: require.resolve(`./src/templates/Standard.js`),
+      component: require.resolve(`./src/templates/Article.js`),
+      context: { slug: node.slug },
+    });
+  });
+  result.data.categories.edges.forEach(({ node }) => {
+    createPage({
+      path: "/" + node.slug + "/",
+      component: require.resolve(`./src/templates/Category.js`),
       context: { slug: node.slug },
     });
   });

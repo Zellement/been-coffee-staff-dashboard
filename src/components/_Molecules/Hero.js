@@ -5,11 +5,11 @@ import Button from "../_Atoms/Button"
 export default function Hero({ title, subtitle, category, goBack }) {
   return (
     <section className="bg-white shadow-xl">
-      <div className="container flex flex-col items-start gap-6 p-4 py-8">
+      <div className="container flex flex-col items-start gap-6 py-8 block-padding">
         <div className="flex flex-col gap-2">
-          <h1>{title}</h1>
+          <h1 className="text-tuscany-500">{title}</h1>
           {subtitle ? (
-            <h2 className="m-0 text-tuscany-500">{subtitle}</h2>
+            <h2 className="m-0 ">{subtitle}</h2>
           ) : null}
         </div>
         {category ? (

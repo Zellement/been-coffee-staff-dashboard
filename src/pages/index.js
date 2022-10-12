@@ -1,23 +1,48 @@
 import React from "react"
 import Button from "../components/_Atoms/Button"
 import Seo from "../components/_Seo"
-import { Link } from "gatsby";
-import Hero from "../components/_Molecules/Hero";
-import Card from "../components/_Atoms/Card";
+import Hero from "../components/_Molecules/Hero"
+import Card from "../components/_Atoms/Card"
+import { Link, graphql } from "gatsby";
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
+
+  const category = data.allDatoCmsCategory
+
+  console.log(data)
   return (
     <>
-      <Seo title="Home"/>
+      <Seo title="Home" />
       <Hero title="Dashboard" />
 
       <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
-
-            <Card url={"policies"} title="Policies" subtitle={"Links to our policies, including our Holiday policy and Food, Drink & Discount policy."} />
-
+        {category.edges.map((item, i) => {
+          return (
+            <Card
+              url={item.node.slug}
+              title={item.node.title}
+              subtitle={item.node.subtitle}
+            />
+          )
+        })}
       </section>
+
+
     </>
   )
 }
+export const query = graphql`
+  query IndexQuery {
+    allDatoCmsCategory(sort: {fields: title, order: ASC}) {
+      edges {
+        node {
+          id
+          slug
+          title
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
