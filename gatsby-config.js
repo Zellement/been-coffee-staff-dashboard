@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `been-coffee-dashboard`,
-        short_name: `been-coffee-dashboard`,
+        short_name: `Been Dash`,
         start_url: `/`,
         background_color: `#d85c29`,
         theme_color: `#d85c29`,
