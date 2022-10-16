@@ -13,13 +13,13 @@ const IndexPage = ({data}) => {
   return (
     <>
       <Seo title="Home" />
-      <Hero title="Dashboard" />
+      <Hero title="Dashboard" subtitle="Been Coffee employee dashboard" />
 
       <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
         {category.edges.map((item, i) => {
           return (
             <Card
-              url={item.node.slug}
+              url={"category/" + item.node.slug}
               title={item.node.title}
               subtitle={item.node.subtitle}
             />

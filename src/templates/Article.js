@@ -14,7 +14,7 @@ const Article = ({data}) => {
       <Seo title={title}/>
       <Hero title={title} category={category} goBack subtitle={subtitle} />
 
-      <section className="container p-4 my-8 content">
+      <section className="container p-8 my-8 content">
         <FlexibleContent  content={articleContent} />
       </section>
     </>
@@ -45,6 +45,7 @@ query ($slug: String!) {
           }
           images {
             gatsbyImageData
+            customData
           }
         }
       }

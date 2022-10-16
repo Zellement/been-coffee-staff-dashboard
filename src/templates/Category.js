@@ -17,7 +17,7 @@ const Category = ({data}) => {
       <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
         {data.articles.edges.map((item, i) => {
           return (
-            <Card url={item.node.slug} key={i} date={item.node.meta.updatedAt} title={item.node.title} subtitle={item.node.subtitle} />
+            <Card url={"article/" + item.node.slug} key={i} date={item.node.meta.updatedAt} title={item.node.title} subtitle={item.node.subtitle} />
           )
         })}
       </section>

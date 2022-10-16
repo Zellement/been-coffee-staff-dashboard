@@ -31,14 +31,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
   result.data.articles.edges.forEach(({ node }) => {
     createPage({
-      path: "/" + node.slug + "/",
+      path: "/article/" + node.slug + "/",
       component: require.resolve(`./src/templates/Article.js`),
       context: { slug: node.slug },
     });
   });
   result.data.categories.edges.forEach(({ node }) => {
     createPage({
-      path: "/" + node.slug + "/",
+      path: "/category/" + node.slug + "/",
       component: require.resolve(`./src/templates/Category.js`),
       context: { slug: node.slug },
     });

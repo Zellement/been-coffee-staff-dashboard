@@ -103,7 +103,7 @@ h3 {
 }
 
 .container {
-  @apply max-w-screen-xl mx-auto;
+  @apply w-full max-w-screen-xl mx-auto;
   &--md {
     @apply max-w-screen-md;
   }
