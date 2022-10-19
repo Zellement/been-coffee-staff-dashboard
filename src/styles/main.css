@@ -39,7 +39,7 @@ html {
 
 body {
   font-size: 62.5%;
-  @apply relative text-xs antialiased font-normal leading-normal text-navy font-krete xl:text-sm lg:pb-56;
+  @apply relative pb-16 text-xs antialiased font-normal leading-normal text-navy font-krete xl:text-sm lg:pb-56;
 }
 
 body::after {

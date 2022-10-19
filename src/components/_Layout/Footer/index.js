@@ -12,15 +12,15 @@ export default function Footer() {
 
   return (
     isAuthenticated && (
-      <div
-        className={`fixed bottom-0 left-0 w-full bg-white border-t border-opacity-25 transition-all duration-300 border-navy-100 ${
+      <footer
+        className={`fixed bottom-0 left-0 w-full bg-butterscotch border-t border-opacity-25 transition-all duration-300 border-navy-100 ${
           quickLinksActive ? `translate-y-0 lg:translate-y-full` : `translate-y-full lg:translate-y-0`
         }`}
       >
         <div className="relative flex flex-row justify-end gap-4 p-4">
           <button
             onClick={() => setQuickLinksActive(!quickLinksActive)}
-            className="absolute flex flex-row items-center px-4 py-1 tracking-widest uppercase bg-white border-t border-l border-r border-opacity-25 bottom-full border-navy-100"
+            className="absolute flex flex-row items-center px-4 py-1 tracking-widest uppercase border-t border-l border-r border-opacity-25 bg-butterscotch bottom-full border-navy-100"
           >
             Quick menu{" "}
             <BiChevronDown
@@ -29,11 +29,11 @@ export default function Footer() {
               } transitiom-all duration-300`}
             />
           </button>
-          <Button className="flex flex-row items-center gap-1" url="/">
+          <Button className="flex flex-row items-center gap-1 bg-white" url="/">
             <span className="sr-only">Home</span> <RiHomeSmileFill />
           </Button>
           <Button
-            className="flex flex-row items-center gap-1"
+            className="flex flex-row items-center gap-1 bg-white"
             external
             url="https://www.been.coffee"
           >
@@ -42,7 +42,7 @@ export default function Footer() {
 
           {user.payslipUrl ? (
             <Button
-              className="flex flex-row items-center gap-1"
+              className="flex flex-row items-center gap-1 bg-white"
               external
               url={user.payslipUrl}
             >
@@ -60,7 +60,7 @@ export default function Footer() {
             </span>
           ) : null}
         </div>
-      </div>
+      </footer>
     )
   )
 }

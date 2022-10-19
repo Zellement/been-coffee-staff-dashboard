@@ -14,7 +14,7 @@ export default function Hero({ title, subtitle, category, goBack }) {
         </div>
         {category ? (
           <div className="flex flex-col gap-1">
-          <p className="leading-none m-0 text-[10px] uppercase opacity-50">Categories</p>
+          <p className="leading-none m-0 mb-1.5 text-[10px] uppercase opacity-50">Categories</p>
           <div className="flex flex-row gap-2">
             {category.map((cat, i) => {
               return (
