@@ -32,9 +32,6 @@ export default function Footer() {
           <Button className="flex flex-row items-center gap-1 bg-white" url="/">
             <span className="sr-only">Home</span> <RiHomeSmileFill />
           </Button>
-          <Button className="flex flex-row items-center gap-1 bg-white" url="/feedback">
-            <span className="sr-only">Feedback</span> <FaCommentDots />
-          </Button>
           <Button
             className="flex flex-row items-center gap-1 bg-white"
             external

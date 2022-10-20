@@ -8,14 +8,14 @@ import { IoIosOpen } from "react-icons/io"
 import FlexibleContent from "../components/_Layout/FlexibleContent"
 
 const Category = ({ data }) => {
-  console.log(data)
+  console.log(data.stickyArticles.edges.length)
 
   return (
     <>
       <Seo title="Policies" />
       <Hero title={data.category.title} goBack />
 
-      {data.stickyArticles && data.stickyArticles.length > 0 ? (
+      {data.stickyArticles && data.stickyArticles.edges.length > 0 ? (
         <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
           {data.stickyArticles.edges.map((item, i) => {
             return (

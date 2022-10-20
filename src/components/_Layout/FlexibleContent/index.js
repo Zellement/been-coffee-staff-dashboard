@@ -11,13 +11,12 @@ function FlexibleContent(props) {
         if (item.model.apiKey === "text_block") {
           return <TextBlock data={item} key={item.id} />
         } else if (item.model.apiKey === "image_block") {
+          console.log(item.fullWidth)
           return item.images.map((img) => {
-          console.log(img)
-
             return (
               <div className="container container--lg" key={item.id}>
               <GatsbyImage
-                className={img.customData?.class ?? 'w-full h-auto block'}
+                className={item.fullWidth ? 'w-full h-auto block' :  'w-auto h-auto block'}
                 image={img.gatsbyImageData}
                 alt="Been Coffee"
               />

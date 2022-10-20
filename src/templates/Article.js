@@ -40,6 +40,7 @@ query ($slug: String!) {
         }
         ... on DatoCmsImageBlock {
           id
+          fullWidth
           model {
             apiKey
           }

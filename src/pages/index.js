@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
   return (
     <>
       <Seo title="Home" />
-      <Hero title="Dashboard" subtitle="Been Coffee employee dashboard" />
+      <Hero title="Dashboard" isHome subtitle="Been Coffee employee dashboard" />
 
       <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
         {category.edges.map((item, i) => {
