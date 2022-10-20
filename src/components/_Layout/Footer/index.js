@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react"
 import Button from "../../_Atoms/Button"
 import { RiMoneyPoundCircleFill, RiHomeSmileFill } from "react-icons/ri"
 import { BiChevronDown } from "react-icons/bi"
-import { FaCashRegister } from "react-icons/fa"
+import { FaCashRegister, FaCommentDots } from "react-icons/fa"
 import { GoGlobe } from "react-icons/go"
 
 export default function Footer() {
@@ -32,6 +32,9 @@ export default function Footer() {
           <Button className="flex flex-row items-center gap-1 bg-white" url="/">
             <span className="sr-only">Home</span> <RiHomeSmileFill />
           </Button>
+          <Button className="flex flex-row items-center gap-1 bg-white" url="/feedback">
+            <span className="sr-only">Feedback</span> <FaCommentDots />
+          </Button>
           <Button
             className="flex flex-row items-center gap-1 bg-white"
             external
@@ -40,21 +43,21 @@ export default function Footer() {
             <span className="sr-only">Website</span> <GoGlobe />
           </Button>
 
-          {user.payslipUrl ? (
+          {user.data.payslipUrl ? (
             <Button
               className="flex flex-row items-center gap-1 bg-white"
               external
-              url={user.payslipUrl}
+              url={user.data.payslipUrl}
             >
               My Payslips <RiMoneyPoundCircleFill />
             </Button>
           ) : null}
 
-          {user.tillPin ? (
+          {user.data.tillPin ? (
             <span className="flex flex-row items-center gap-2 ">
               <span className="flex flex-col items-end">
                 <span className="leading-none opacity-50 text-[10px]">Till PIN</span>
-                <span className="font-mono leading-none">{user.tillPin}</span>
+                <span className="font-mono leading-none">{user.data.tillPin}</span>
               </span>
                <FaCashRegister />
             </span>
