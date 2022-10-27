@@ -95,7 +95,7 @@ h1 {
 }
 
 h2 {
-  @apply text-lg;
+  @apply text-xl;
 }
 
 h3 {
@@ -130,13 +130,13 @@ Content
 }
 
 .content h2, .content h3, .content h4 {
-  @apply mb-4;
+  @apply mb-4 text-tuscany-500;
 }
 
-
-.content h2, .content h3, .content h4 {
-  @apply text-tuscany-500;
+.content h2 {
+  @apply text-2xl;
 }
+
 
 .content blockquote {
   @apply relative pl-12 pr-4 border-l border-r border-navy;
