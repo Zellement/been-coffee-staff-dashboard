@@ -15,11 +15,15 @@ function FlexibleContent(props) {
           return item.images.map((img) => {
             return (
               <div className="container container--lg" key={item.id}>
-              <GatsbyImage
-                className={item.fullWidth ? 'w-full h-auto block' :  'w-auto h-auto block'}
-                image={img.gatsbyImageData}
-                alt="Been Coffee"
-              />
+                <GatsbyImage
+                  className={
+                    item.fullWidth
+                      ? "w-full h-auto block"
+                      : "w-auto h-auto block"
+                  }
+                  image={img.gatsbyImageData}
+                  alt="Been Coffee"
+                />
               </div>
             )
           })

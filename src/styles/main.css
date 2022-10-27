@@ -112,6 +112,14 @@ h3 {
   }
 }
 
+.grid-layout {
+  @apply grid grid-cols-12 gap-2 md:gap-4 xl:gap-8;
+}
+
+.container-padding {
+  @apply px-4;
+}
+
 
 /* --------------------------
 Content
