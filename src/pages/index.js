@@ -8,7 +8,6 @@ import { Link, graphql } from "gatsby"
 const IndexPage = ({ data }) => {
   const category = data.allDatoCmsCategory
 
-  console.log(data)
   return (
     <>
       <Seo title="Home" />

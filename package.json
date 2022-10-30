@@ -6,6 +6,7 @@
   "author": "Dan Farrow <dan@zellement>",
   "dependencies": {
     "@auth0/auth0-react": "^1.10.2",
+    "@mailchimp/mailchimp_marketing": "^3.0.78",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.11.1",
     "gatsby-image": "^3.7.1",
