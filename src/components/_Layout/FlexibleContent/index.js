@@ -11,7 +11,6 @@ function FlexibleContent(props) {
         if (item.model.apiKey === "text_block") {
           return <TextBlock data={item} key={item.id} />
         } else if (item.model.apiKey === "image_block") {
-          console.log(item.fullWidth)
           return item.images.map((img) => {
             return (
               <div className="container container--lg" key={item.id}>
@@ -27,6 +26,14 @@ function FlexibleContent(props) {
               </div>
             )
           })
+        }else if (item.model.apiKey === "video_block") {
+            return (
+              <div className="container container--sm">
+                <video width={item.video.width} height={item.video.height} controls className="w-auto max-w-full mx-auto">
+                  <source src={item.video.url} />
+                </video>
+              </div>
+            )
         }
       })}
     </div>

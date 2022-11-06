@@ -49,6 +49,17 @@ export const query = graphql`
             customData
           }
         }
+        ... on DatoCmsVideoBlock {
+          id
+          model {
+            apiKey
+          }
+          video {
+            url
+            width
+            height
+          }
+        }
       }
       category {
         id
