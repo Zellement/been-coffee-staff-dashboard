@@ -50,7 +50,7 @@ body::after {
 
 
 a {
-  @apply transition duration-300;
+  @apply transition duration-300 cursor-pointer;
 }
 
 [class*="transition"] {
