@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 // import MobileNavButton from "../Navigation/MobileNavButton"
 import LoginButton from "../../_Atoms/LoginButton"
 import LogoutButton from "../../_Atoms/LogoutButton"
+import Search from "../../_Search"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default function Header(props) {
@@ -23,6 +24,7 @@ export default function Header(props) {
           <p className="sr-only">Staff Dashboard</p>
         </Link>
         <div className="flex flex-col col-span-8 col-start-5 gap-2 ">
+          <Search />
           <LoginButton />
           <LogoutButton />
         </div>
