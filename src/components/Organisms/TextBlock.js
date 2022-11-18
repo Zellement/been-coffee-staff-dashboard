@@ -5,13 +5,11 @@ function TextBlock({ data }) {
   const { text } = data || {};
 
   return (
-      <div className="container container--md content">
 
             <div
-              className=""
+              className="container container--md content"
               dangerouslySetInnerHTML={{ __html: text }}
             ></div>
-      </div>
   );
 }
 

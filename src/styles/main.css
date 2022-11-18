@@ -128,16 +128,24 @@ h3 {
 Content
 -------------------------- */
 
-.content p {
-  @apply mb-8;
+.content {
+  @apply flex flex-col gap-8;
 }
 
 .content h2, .content h3, .content h4 {
-  @apply mb-4 text-tuscany-500;
+  @apply  text-tuscany-500;
 }
 
 .content h2 {
   @apply text-2xl;
+}
+
+.content ul li {
+  @apply ml-12 list-disc;
+}
+
+.content strong {
+  @apply font-bold;
 }
 
 

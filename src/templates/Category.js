@@ -12,7 +12,7 @@ const Category = ({ data }) => {
 
   return (
     <>
-      <Seo title="Policies" />
+      <Seo title={data.category.title} />
       <Hero title={data.category.title} goBack />
 
       {data.stickyArticles && data.stickyArticles.edges.length > 0 ? (
