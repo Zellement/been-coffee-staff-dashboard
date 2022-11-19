@@ -22,16 +22,15 @@ export default function Hero({ title, subtitle, category, goBack, isHome }) {
                 <>
                   {category.map((cat, i) => {
                     return (
-                      <>
+                      <span key={cat.slug}>
                         <Link
-                          key={i}
                           className="underline hover:lg:text-tuscany "
                           to={`/category/${cat.slug}`}
                         >
                           {cat.title}
                         </Link>
-                        {i + 1 === category.length ? null : <span>&</span>}
-                      </>
+                        {i + 1 === category.length ? null : <span className="ml-2">&</span>}
+                      </span>
                     )
                   })}
                 </>

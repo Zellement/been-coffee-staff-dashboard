@@ -1,14 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Button from "../components/_Atoms/Button"
 import Hero from "../components/_Molecules/Hero"
 import Card from "../components/_Atoms/Card"
 import Seo from "../components/_Seo"
-import { IoIosOpen } from "react-icons/io"
-import FlexibleContent from "../components/_Layout/FlexibleContent"
 
 const Category = ({ data }) => {
-  console.log(data.stickyArticles.edges.length)
 
   return (
     <>

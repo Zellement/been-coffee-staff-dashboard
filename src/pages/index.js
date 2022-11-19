@@ -1,9 +1,8 @@
 import React from "react"
-import Button from "../components/_Atoms/Button"
 import Seo from "../components/_Seo"
 import Hero from "../components/_Molecules/Hero"
 import Card from "../components/_Atoms/Card"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => {
   const category = data.allDatoCmsCategory
@@ -22,6 +21,7 @@ const IndexPage = ({ data }) => {
           {category.edges.map((item, i) => {
             return (
               <Card
+              key={item.node.slug}
                 url={"category/" + item.node.slug}
                 title={item.node.title}
                 subtitle={item.node.subtitle}
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
             </li>
             <li>
               WhatsApp:{" "}
-              <a target="_blank" href="https://wa.me/07900145741">
+              <a target="_blank" rel="noopener noreferrer" href="https://wa.me/07900145741">
                 07900 145 741
               </a>
             </li>
