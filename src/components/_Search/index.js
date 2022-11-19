@@ -1,14 +1,21 @@
 import { useStaticQuery, graphql } from "gatsby"
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import AllPages from "./AllPages"
 import { AiFillCloseCircle } from "react-icons/ai"
 
 export default function Search({ showModal, setShowModal }) {
+
+  const ref = useRef(null)
   const [inputText, setInputText] = useState("")
 
   const handleChange = event => {
     setInputText(event.target.value.toLowerCase());
   };
+
+  const handleClear = event => {
+    setInputText('')
+    ref.current.focus()
+  }
 
   return (
     <div
@@ -30,8 +37,9 @@ export default function Search({ showModal, setShowModal }) {
           className="w-full p-4 text-black rounded-full max-w-screen-xs lg:my-auto focus:outline-none"
           placeholder="Search page title..."
           label="Search"
+          ref={ref}
         ></input>
-          <button onClick={() => setInputText('')} className={`flex flex-row items-center gap-1 p-1 -ml-12 rounded-full transition-all duration-300 bg-navy-500 hover:text-butterscotch-500 ${ inputText === '' ? 'translate-x-1/2 opacity-0' : 'translate-x-0 opacity-100'}`}>
+          <button onClick={() => handleClear()} className={`flex flex-row items-center gap-1 p-1 -ml-12 rounded-full transition-all duration-300 bg-navy-500 hover:text-butterscotch-500 ${ inputText === '' ? 'translate-x-1/2 opacity-0' : 'translate-x-0 opacity-100'}`}>
             <AiFillCloseCircle className="text-sm" />{" "}
             <span className="text-mono text-[10px] uppercase">Clear</span>
           </button>
