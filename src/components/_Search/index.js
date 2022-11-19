@@ -7,7 +7,7 @@ export default function Search({ showModal, setShowModal }) {
   const [inputText, setInputText] = useState("")
 
   const handleChange = event => {
-    setInputText(event.target.value);
+    setInputText(event.target.value.toLowerCase());
   };
 
   return (
