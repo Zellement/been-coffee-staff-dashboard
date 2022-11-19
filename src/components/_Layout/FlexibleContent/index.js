@@ -1,6 +1,6 @@
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
-import TextBlock from "../../Organisms/TextBlock"
+import TextBlock from "../../_Organisms/TextBlock"
 
 function FlexibleContent(props) {
   const { content } = props || {}
