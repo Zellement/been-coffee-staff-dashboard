@@ -42,6 +42,11 @@ body {
   @apply relative pb-16 text-xs antialiased font-normal leading-normal text-navy font-krete xl:text-sm lg:pb-56;
 }
 
+body::before {
+  content: '';
+  @apply block w-full h-[50px];
+}
+
 body::after {
   content: '';
   background-image: url("../images/pattern-butterscotch.svg");

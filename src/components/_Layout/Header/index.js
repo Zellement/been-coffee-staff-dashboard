@@ -15,7 +15,7 @@ export default function Header(props) {
   // const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   return (
-    <header className={`text-white bg-navy-500 ${className}`}>
+    <header className={`text-white bg-navy-500 fixed top-0 left-0 w-full right-0 ${className}`}>
       <div className="container flex flex-row items-start justify-between w-full py-4 container-padding ">
         <Link to="/" className="flex flex-row items-start gap-2">
           <StaticImage
