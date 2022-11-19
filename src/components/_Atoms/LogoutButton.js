@@ -1,6 +1,7 @@
 import React from "react"
 import { useAuth0 } from "@auth0/auth0-react"
 import { Link } from "gatsby"
+import { HiOutlineLogout} from "react-icons/hi"
 
 function LogoutButton() {
   const { isAuthenticated, logout, user } = useAuth0()
@@ -12,12 +13,13 @@ function LogoutButton() {
           Hello, {user.name}
         </Link>
         <button
-          className="btn btn--2xs"
+          className="text-lg"
           onClick={() => {
             logout({ returnTo: window.location.origin })
           }}
         >
-          Log out
+          <span className="sr-only">Log out</span>
+          <HiOutlineLogout />
         </button>
       </div>
     )
