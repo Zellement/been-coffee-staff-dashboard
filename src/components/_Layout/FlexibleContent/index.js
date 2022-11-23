@@ -1,6 +1,7 @@
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import TextBlock from "../../_Organisms/TextBlock"
+import { AiFillFilePdf} from "react-icons/ai"
 
 function FlexibleContent(props) {
   const { content } = props || {}
@@ -26,14 +27,33 @@ function FlexibleContent(props) {
               </div>
             )
           })
-        }else if (item.model.apiKey === "video_block") {
-            return (
-              <div className="container container--sm">
-                <video width={item.video.width} height={item.video.height} controls className="w-auto max-w-full mx-auto">
-                  <source src={item.video.url} />
-                </video>
-              </div>
-            )
+        } else if (item.model.apiKey === "video_block") {
+          return (
+            <div className="container container--sm">
+              <video
+                width={item.video.width}
+                height={item.video.height}
+                controls
+                className="w-auto max-w-full mx-auto"
+              >
+                <source src={item.video.url} />
+              </video>
+            </div>
+          )
+        } else if (item.model.apiKey === "download_block") {
+          return (
+            <ul className="container flex flex-col gap-4 list-none container--sm">
+              {item.pdfs.map((pdf) => {
+                return (
+                  <li key={pdf.title}>
+                    <a className="flex flex-row items-center gap-4 p-4 bg-white shadow hover:lg:bg-gray-200 rounded-xl" href={pdf.url} target="_blank" rel="noopener noreferrer">
+                      <AiFillFilePdf className="text-red-500" /> {pdf.title}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          )
         }
       })}
     </div>

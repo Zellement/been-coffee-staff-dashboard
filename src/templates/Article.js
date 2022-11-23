@@ -14,7 +14,7 @@ const Article = ({ data }) => {
       <Seo title={title} />
       <Hero title={title} category={category} goBack subtitle={subtitle} />
 
-      <section className="container p-8 content">
+      <section className="container p-8">
         <FlexibleContent content={articleContent} />
       </section>
     </>
@@ -58,6 +58,16 @@ export const query = graphql`
             url
             width
             height
+          }
+        }
+        ... on DatoCmsDownloadBlock {
+          id
+          model {
+            apiKey
+          }
+          pdfs {
+            url
+            title
           }
         }
       }

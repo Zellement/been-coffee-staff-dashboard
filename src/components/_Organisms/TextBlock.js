@@ -5,9 +5,9 @@ function TextBlock({ data }) {
   const { text } = data || {};
 
   return (
-    <div className="container overflow-x-auto container--md">
+    <div className="container overflow-x-auto container--md content">
             <div
-              className="w-full  content"
+              className="w-full content"
               dangerouslySetInnerHTML={{ __html: text }}
             ></div></div>
   );
