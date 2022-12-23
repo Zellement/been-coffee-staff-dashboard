@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#d85c29`,
         theme_color: `#d85c29`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        icon: `src/images/been-staff-dashboard.png`,
       },
     },
   ],
