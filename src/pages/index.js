@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       <div className="container container-padding">
         <div className="grid grid-cols-1">
           <section className="py-8">
-            <h2>Last 20 Orders</h2>
+            <h2>Last 30 Orders</h2>
             <div className="w-full py-8 overflow-x-scroll breakout">
               <div className="flex flex-row w-full pl-4 space-x-4 ">
 
@@ -39,18 +39,21 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
           </section>
-          <section className="grid grid-cols-1 gap-6 my-8 md:grid-cols-3 lg:grid-cols-3">
-            {category.edges.map((item, i) => {
-              return (
-                <Card
-                  key={item.node.slug}
-                  url={"category/" + item.node.slug}
-                  title={item.node.title}
-                  subtitle={item.node.subtitle}
-                />
-              )
-            })}
-          </section>
+          <div className="">
+            <h2>Article Categories</h2>
+            <section className="grid grid-cols-1 gap-6 my-8 md:grid-cols-3 lg:grid-cols-3">
+              {category.edges.map((item, i) => {
+                return (
+                  <Card
+                    key={item.node.slug}
+                    url={"category/" + item.node.slug}
+                    title={item.node.title}
+                    subtitle={item.node.subtitle}
+                  />
+                )
+              })}
+            </section>
+          </div>
         </div>
         <section className="container p-8 mt-16 content bg-butterscotch-200 rounded-xl">
           <h2>Got an idea to improve this dashboard?</h2>
@@ -83,9 +86,10 @@ export const query = graphql`
         }
       }
     }
-    allDatoCmsOrder(sort: {fields: expectedDeliveryDate, order: DESC}, limit: 20) {
+    allDatoCmsOrder(sort: {fields: expectedDeliveryDate, order: DESC}, limit: 30) {
       edges {
         node {
+          orderId
           id
           standard
           orderDate(formatString: "ddd D MMM YYYY")

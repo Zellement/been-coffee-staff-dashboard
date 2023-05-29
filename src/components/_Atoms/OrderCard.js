@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { RiMoneyPoundBoxFill, RiTruckFill } from "react-icons/ri"
+import { RiMoneyPoundBoxFill, RiSearchFill, RiTruckFill } from "react-icons/ri"
 import { BsInfoCircleFill } from "react-icons/bs"
 import { BsExclamationTriangleFill } from "react-icons/bs"
+import { BiHash } from "react-icons/bi"
 
 export default function OrderCard({ item }) {
   return (
@@ -25,7 +26,14 @@ export default function OrderCard({ item }) {
           <div className="flex flex-row items-center justify-end gap-2">
             <span>{item.node.orderDate}</span>
             <h4 className="text-tuscany"><RiMoneyPoundBoxFill /></h4>
-          </div></div>
+          </div>
+          {item.node.orderId ?
+            <div className="flex flex-row items-center justify-end gap-2">
+              <span className="">{item.node.orderId}</span>
+              <h4 className="text-tuscany"><BiHash /></h4>
+            </div>
+            : null}
+        </div>
       </div>
       <div className="flex flex-col space-y-4">
 
