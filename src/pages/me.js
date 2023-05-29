@@ -8,23 +8,23 @@ const MePage = () => {
 
   return (
     isAuthenticated && (
-    <>
-      <Seo title="Me" />
-      <Hero title={`Hello, ${user.name}`} subtitle="Check the details we have on file for you here" />
+      <>
+        <Seo title="Me" />
+        <Hero title={`Hello, ${user.name}`} subtitle="Check the details we have on file for you here" />
 
-      <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
+        <section className="container grid grid-cols-1 gap-6 p-4 my-8 md:grid-cols-3 lg:grid-cols-5">
 
-        <p>Coming soon...</p>
-{/* 
+          <p>Coming soon...</p>
+          {/* 
         <ul>
 
           <li>Birthday: { user.data.dob}</li>
           <li>Birthday</li>
         </ul> */}
 
-      </section>
+        </section>
 
-    </>
+      </>
     )
   )
 }

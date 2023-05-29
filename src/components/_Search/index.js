@@ -18,9 +18,8 @@ export default function Search({ showModal, setShowModal }) {
 
   return (
     <div
-      className={`fixed transition duration-300 ease-in-out inset-0 bg-navy-500 z-[1000] p-8 flex h-screen lg:gap-16 lg:flex-row flex-col items-start gap-8 ${
-        showModal ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed transition duration-300 ease-in-out inset-0 bg-navy-500 z-[1000] p-8 flex h-screen lg:gap-16 lg:flex-row flex-col items-start gap-8 ${showModal ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <button
         onClick={() => setShowModal(false)}
@@ -38,10 +37,10 @@ export default function Search({ showModal, setShowModal }) {
           label="Search"
           ref={ref}
         ></input>
-          <button onClick={() => handleClear()} className={`flex flex-row items-center gap-1 p-1 -ml-12 rounded-full transition-all duration-300 bg-navy-500 hover:text-butterscotch-500 ${ inputText === '' ? 'translate-x-1/2 opacity-0' : 'translate-x-0 opacity-100'}`}>
-            <AiFillCloseCircle className="text-sm" />{" "}
-            <span className="text-mono text-[10px] uppercase">Clear</span>
-          </button>
+        <button onClick={() => handleClear()} className={`flex flex-row items-center gap-1 p-1 -ml-12 rounded-full transition-all duration-300 bg-navy-500 hover:text-butterscotch-500 ${inputText === '' ? 'translate-x-1/2 opacity-0' : 'translate-x-0 opacity-100'}`}>
+          <AiFillCloseCircle className="text-sm" />{" "}
+          <span className="text-mono text-[10px] uppercase">Clear</span>
+        </button>
       </div>
       <AllPages setShowModal={setShowModal} input={inputText} />
     </div>
