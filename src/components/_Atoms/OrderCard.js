@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { RiMoneyPoundBoxFill, RiSearchFill, RiTruckFill } from "react-icons/ri"
 import { BsInfoCircleFill } from "react-icons/bs"

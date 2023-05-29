@@ -8,12 +8,12 @@ import { RiMoneyPoundBoxFill, RiTruckFill } from "react-icons/ri"
 import { BsInfoCircleFill } from "react-icons/bs"
 import { BsExclamationTriangleFill } from "react-icons/bs"
 import OrderCard from "../components/_Atoms/OrderCard"
+import { BiCalendar } from "react-icons/bi"
 
 const IndexPage = ({ data }) => {
   const category = data.allDatoCmsCategory
   const orders = data.allDatoCmsOrder
-
-  console.log(orders)
+  const team = data.allDatoCmsTeam
 
   return (
     <>
@@ -34,6 +34,33 @@ const IndexPage = ({ data }) => {
                 {orders.edges.map((item, i) => {
                   return (
                     <OrderCard item={item} />
+                  )
+                })}
+              </div>
+            </div>
+          </section>
+          <section className="py-8">
+            <h2>Team</h2>
+            <div className="w-full py-8 overflow-x-scroll breakout">
+              <div className="flex flex-row w-full pl-4 space-x-4 ">
+
+                {team.edges.map((item, i) => {
+                  return (
+                    <div className="relative flex-shrink-0">
+
+                      <GatsbyImage
+                        className="object-contain w-full h-full"
+                        image={item.node.picture.gatsbyImageData}
+                        alt="Been Coffee"
+                      />
+
+                      <div className="absolute bottom-0 right-0 flex flex-col items-end justify-end text-right text-2xs">
+                        <span className="px-2 py-1 bg-seashell font-riverside">{item.node.name}</span>
+                        <span className="px-2 py-1 bg-seashell text-3xs">{item.node.role}</span>
+                        <span className="flex flex-row items-center gap-2 px-2 py-1 bg-seashell text-3xs"><BiCalendar /> {item.node.startDate}</span>
+                      </div>
+
+                    </div>
                   )
                 })}
               </div>
@@ -83,6 +110,19 @@ export const query = graphql`
           id
           slug
           title
+        }
+      }
+    }
+    allDatoCmsTeam(sort: {order: ASC, fields: position}) {
+      edges {
+        node {
+          id
+          startDate(formatString: "DD MMM YYYY")
+          role
+          picture {
+            gatsbyImageData(width: 200, height: 300)
+          }
+          name
         }
       }
     }
