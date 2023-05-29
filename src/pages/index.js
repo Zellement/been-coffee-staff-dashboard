@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
 
                 {team.edges.map((item, i) => {
                   return (
-                    <div className="relative flex-shrink-0">
+                    <div className="relative flex-shrink-0 overflow-hidden rounded-lg shadow-lg">
 
                       <GatsbyImage
                         className="object-contain w-full h-full"
