@@ -4,6 +4,7 @@ module.exports = {
   safelist: ["is-active", "max-w-full", 'max-w-screen-md', 'mx-auto'],
   theme: {
     fontSize: {
+      "3xs": "1.2rem",
       "2xs": "1.4rem",
       xs: "1.6rem",
       sm: "1.8rem",
