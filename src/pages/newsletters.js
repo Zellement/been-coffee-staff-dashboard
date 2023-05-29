@@ -1,7 +1,7 @@
 import React from "react"
 import Seo from "../components/_Seo"
 import Hero from "../components/_Molecules/Hero"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { AiFillCalendar } from "react-icons/ai"
 
 const NewslettersPage = ({ data }) => {

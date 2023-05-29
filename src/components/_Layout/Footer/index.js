@@ -4,7 +4,7 @@ import Button from "../../_Atoms/Button"
 import { RiMoneyPoundCircleFill, RiHomeSmileFill } from "react-icons/ri"
 import { BiChevronDown } from "react-icons/bi"
 import { BsNewspaper } from "react-icons/bs"
-import { FaCashRegister, FaCommentDots } from "react-icons/fa"
+import { FaCashRegister } from "react-icons/fa"
 import { GoGlobe } from "react-icons/go"
 
 export default function Footer() {
@@ -14,11 +14,10 @@ export default function Footer() {
   return (
     isAuthenticated && (
       <footer
-        className={`fixed bottom-0 left-0 w-full bg-butterscotch border-t border-opacity-25 transition-all duration-300 border-navy-100 ${
-          quickLinksActive
+        className={`fixed bottom-0 left-0 w-full bg-butterscotch border-t border-opacity-25 transition-all duration-300 border-navy-100 ${quickLinksActive
             ? `translate-y-0 lg:translate-y-full`
             : `translate-y-full lg:translate-y-0`
-        }`}
+          }`}
       >
         <div className="relative flex flex-row justify-end gap-4 p-4">
           <button
@@ -27,9 +26,8 @@ export default function Footer() {
           >
             Quick menu{" "}
             <BiChevronDown
-              className={` ${
-                quickLinksActive ? "rotate-180" : ""
-              } transitiom-all duration-300`}
+              className={` ${quickLinksActive ? "rotate-180" : ""
+                } transitiom-all duration-300`}
             />
           </button>
           <Button className="flex flex-row items-center gap-1 bg-white" url="/">

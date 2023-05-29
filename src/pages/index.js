@@ -6,8 +6,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { RiMoneyPoundBoxFill, RiTruckFill } from "react-icons/ri"
 import { BsInfoCircleFill } from "react-icons/bs"
-
-import { BsTruck } from "react-icons/bs"
+import { BsExclamationTriangleFill } from "react-icons/bs"
 
 const IndexPage = ({ data }) => {
   const category = data.allDatoCmsCategory
@@ -53,17 +52,20 @@ const IndexPage = ({ data }) => {
                           <h4 className="text-tuscany"><RiMoneyPoundBoxFill /></h4>
                           <span>{item.node.orderDate}</span>
                         </div>
-                        <h5 className="pt-4 border-t border-grey-200 text-tuscany">Details</h5>
-                        <div
-                          className="text-2xs content"
-                          dangerouslySetInnerHTML={{ __html: item.node.details }} />
-                        <h5 className="pt-4 text-gray-400 border-t border-grey-200"><BsInfoCircleFill /></h5>
-                        {item.node.notes ?
+                        <h5 className="pt-4 border-t border-grey-200 text-navy"><BsInfoCircleFill /></h5>
+                        {item.node.standard ? <p className="italic opacity-30 text-2xs">Standard order for this supplier</p> :
                           <div
                             className="text-2xs content"
-                            dangerouslySetInnerHTML={{ __html: item.node.notes }} />
+                            dangerouslySetInnerHTML={{ __html: item.node.details }} />
+                        }
+                        {item.node.notes ?
+                          <>
+                            <h5 className="pt-4 border-t text-butterscotch-400 border-grey-200"><BsExclamationTriangleFill /></h5>
+                            <div
+                              className="text-2xs content"
+                              dangerouslySetInnerHTML={{ __html: item.node.notes }} /></>
                           :
-                          <p className='opacity-30 text-2xs'>--</p>
+                          null
                         }
                       </div>
                     </div>
@@ -116,10 +118,11 @@ export const query = graphql`
         }
       }
     }
-    allDatoCmsOrder(sort: {fields: expectedDeliveryDate, order: ASC}, limit: 20) {
+    allDatoCmsOrder(sort: {fields: expectedDeliveryDate, order: DESC}, limit: 20) {
       edges {
         node {
           id
+          standard
           orderDate(formatString: "ddd D MMM YYYY")
           expectedDeliveryDate(formatString: "ddd D MMM YYYY")
           detailsNode {
