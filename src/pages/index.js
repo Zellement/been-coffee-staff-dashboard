@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
                             className="text-2xs content"
                             dangerouslySetInnerHTML={{ __html: item.node.notes }} />
                           :
-                          <p className='opacity-30 text-2xs'>No notes</p>
+                          <p className='opacity-30 text-2xs'>--</p>
                         }
                       </div>
                     </div>
