@@ -8,11 +8,13 @@ import { RiMoneyPoundBoxFill, RiTruckFill } from "react-icons/ri"
 import { BsInfoCircleFill } from "react-icons/bs"
 import { BsExclamationTriangleFill } from "react-icons/bs"
 import OrderCard from "../components/_Atoms/OrderCard"
+import StandingOrderCard from "../components/_Atoms/StandingOrderCard"
 import { BiCalendar } from "react-icons/bi"
 
 const IndexPage = ({ data }) => {
   const category = data.allDatoCmsCategory
   const orders = data.allDatoCmsOrder
+  const standingOrders = data.allDatoCmsStandingOrder
   const team = data.allDatoCmsTeam
 
   return (
@@ -24,9 +26,9 @@ const IndexPage = ({ data }) => {
         subtitle="Been Coffee employee dashboard"
       />
 
-      <div className="container container-padding">
-        <div className="grid grid-cols-1">
-          <section className="py-8">
+      <div className="container relative mt-16 container-padding">
+        <div className="flex flex-col">
+          <section className="py-8 xl:col-span-8">
             <h2>Last 30 Orders</h2>
             <div className="w-full py-8 overflow-x-scroll breakout">
               <div className="flex flex-row w-full pl-4 space-x-4 ">
@@ -34,6 +36,19 @@ const IndexPage = ({ data }) => {
                 {orders.edges.map((item, i) => {
                   return (
                     <OrderCard item={item} />
+                  )
+                })}
+              </div>
+            </div>
+          </section>
+          <section className="py-8 xl:col-span-8">
+            <h2>Standing Orders</h2>
+            <div className="w-full py-8 overflow-x-scroll lg:overflow-x-auto">
+              <div className="flex flex-row w-full pl-4 space-x-4 lg:flex-wrap">
+
+                {standingOrders.edges.map((item, i) => {
+                  return (
+                    <StandingOrderCard item={item} />
                   )
                 })}
               </div>
@@ -123,6 +138,20 @@ export const query = graphql`
             gatsbyImageData(width: 200, height: 300)
           }
           name
+        }
+      }
+    }
+    allDatoCmsStandingOrder {
+      edges {
+        node {
+          id
+          supplier {
+            logo {
+              gatsbyImageData(height: 30, layout: FIXED)
+            }
+          }
+          details
+          deliverySchedule
         }
       }
     }
