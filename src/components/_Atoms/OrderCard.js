@@ -39,7 +39,7 @@ export default function OrderCard({ item }) {
       </div >
       <div className="flex flex-col space-y-8">
 
-        <h5 className="flex flex-row items-center gap-4 text-navy"><BsInfoCircleFill className="mt-1" /> <span className="opacity-10">Details</span></h5>
+        <h5 className="flex flex-row items-center gap-4 text-navy"><BsInfoCircleFill className="mt-1" /> <span className="opacity-30">Details</span></h5>
         {item.node.standard ? <p className="italic opacity-30 text-2xs">Standard order for this supplier</p> :
           <div
             className="text-2xs content"
@@ -47,7 +47,7 @@ export default function OrderCard({ item }) {
         }
         {item.node.notes ?
           <>
-            <h5 className="flex flex-row items-center gap-4 pt-8 border-t border-gray-100 text-butterscotch"><BsExclamationTriangleFill className="mt-1" /> <span className="opacity-30">Notes</span></h5>
+            <h5 className="flex flex-row items-center gap-4 pt-8 border-t border-gray-100 text-butterscotch"><BsExclamationTriangleFill className="mt-1" /> <span className="opacity-40">Notes</span></h5>
             <div
               className="text-2xs content"
               dangerouslySetInnerHTML={{ __html: item.node.notes }} /></>
