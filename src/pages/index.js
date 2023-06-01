@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
                       <div className="absolute bottom-0 right-0 flex flex-col items-end justify-end text-right ">
                         <span className="px-2 py-1 text-sm rounded-tl bg-seashell font-riverside">{item.node.name}</span>
                         <span className="px-2 py-1 bg-seashell text-3xs">{item.node.role}</span>
-                        <span className="flex flex-row items-center gap-2 text-3xs px-2 py-0.5 bg-seashell text-3xs"><BiCalendar /> {item.node.startDate}</span>
+                        <span className="flex flex-row items-center gap-2 text-3xs px-2 py-0.5 bg-seashell "><BiCalendar /> {item.node.startDate}</span>
                       </div>
 
                     </div>
