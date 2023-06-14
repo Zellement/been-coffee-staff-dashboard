@@ -7,7 +7,7 @@ import { BiHash } from "react-icons/bi"
 
 export default function OrderCard({ item }) {
   return (
-    <div className="flex flex-col flex-shrink-0 w-3/4 p-4 bg-white shadow-lg rounded-xl lg:w-auto lg:min-w-[250px] md:w-2/5">
+    <div className="flex flex-col flex-shrink-0 w-3/4 p-4 bg-white shadow-lg rounded-xl md:w-auto sm:min-w-[250px] sm:w-2/5">
       <div className="relative flex flex-row items-center justify-between w-full h-32 p-2 mb-8 border border-gray-100">
         <div className="text-3xs" >
           <div className="flex flex-row items-center gap-2">

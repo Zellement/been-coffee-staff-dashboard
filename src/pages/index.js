@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
 
                 {orders.edges.map((item, i) => {
                   return (
-                    <OrderCard item={item} />
+                    <OrderCard key={`ordercard_${i}`} item={item} />
                   )
                 })}
               </div>
@@ -44,11 +44,11 @@ const IndexPage = ({ data }) => {
           <section className="py-8 xl:col-span-8">
             <h2>Standing Orders</h2>
             <div className="w-full py-8 overflow-x-scroll lg:overflow-x-auto">
-              <div className="flex flex-row w-full pl-4 space-x-4 lg:flex-wrap">
+              <div className="flex flex-row w-full pl-4 space-x-4 lg:space-x-0 lg:gap-4 lg:grid lg:grid-cols-3">
 
                 {standingOrders.edges.map((item, i) => {
                   return (
-                    <StandingOrderCard item={item} />
+                    <StandingOrderCard key={`standingordercard_${i}`} item={item} />
                   )
                 })}
               </div>
@@ -61,12 +61,13 @@ const IndexPage = ({ data }) => {
 
                 {team.edges.map((item, i) => {
                   return (
-                    <div className="relative flex-shrink-0 overflow-hidden rounded-lg shadow-lg">
+                    <div className="relative flex-shrink-0 overflow-hidden rounded-lg shadow-lg"  key={`team_${i}`}>
 
                       <GatsbyImage
                         className="object-contain w-full h-full"
                         image={item.node.picture.gatsbyImageData}
                         alt="Been Coffee"
+                        
                       />
 
                       <div className="absolute bottom-0 right-0 flex flex-col items-end justify-end text-right ">
