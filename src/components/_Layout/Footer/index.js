@@ -15,8 +15,8 @@ export default function Footer() {
     isAuthenticated && (
       <footer
         className={`fixed bottom-0 left-0 w-full bg-butterscotch border-t border-opacity-25 transition-all duration-300 border-navy-100 z-30 ${quickLinksActive
-            ? `translate-y-0 lg:translate-y-full`
-            : `translate-y-full lg:translate-y-0`
+            ? `translate-y-0`
+            : `translate-y-full`
           }`}
       >
         <div className="relative flex flex-row justify-end gap-4 p-4">
