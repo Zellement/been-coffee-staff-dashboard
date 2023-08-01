@@ -18,6 +18,7 @@ const NewslettersPage = ({ data }) => {
               <a
                 href={newsletter.archive_url}
                 className="flex flex-col p-8 bg-white shadow-xl rounded-xl hover:lg:bg-butterscotch-500"
+                rel="noreferrer"
                 target="_blank"
               >
                 <span className="flex flex-row items-center gap-4 opacity-50">

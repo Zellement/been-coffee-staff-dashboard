@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
         subtitle="Been Coffee employee dashboard"
       />
 
-      <a href="https://us18.campaign-archive.com/?u=b7e751c2857c9a81fb5f4c502&id=9e95713b41" target="_blank" rel="noopener noreferrer" className="fixed bottom-0 z-20 p-2 text-white left-4 bg-tuscany-500">
+      <a href="https://us18.campaign-archive.com/?u=b7e751c2857c9a81fb5f4c502&id=9e95713b41" target="_blank" rel="noreferrer" className="fixed bottom-0 z-20 p-2 text-white left-4 bg-tuscany-500">
         
         <p className="uppercase text-3xs">Next record</p>
         <p className="text-2xl font-riverside">£2,000</p>
